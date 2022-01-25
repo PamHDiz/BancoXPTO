@@ -7,22 +7,24 @@ public class TestaConta {
 	public static void main(String[] args) {
 		
 		Conta c1 = new Conta("Danilo", 12345, "0001", 100.0);
-		Conta c2 = new Conta("Danilo", 12345, "0001", 100.0);
+		Conta c2 = new Conta("Rafael", 11222, "0001", 200.0);
 		
-		Conta c3 = c1;
+		/*
+		 * Conta c3 = c1;
+		 * 
+		 * 
+		 * if(c1 == c3) { System.out.println("São iguais"); } else {
+		 * System.out.println("São diferentes"); }
+		 * 
+		 * c1.deposita(300.0); c1.saca(50.0);
+		 * System.out.println(c1.calculaRendimento());
+		 * System.out.println(c1.recuperaDadosParaImpressao());
+		 * System.out.println(Conta.getTotalDeContas());
+		 */
 		
-		
-		if(c1 == c3) {
-			System.out.println("São iguais");
-		} else {
-			System.out.println("São diferentes");
-		}
-		
-		c1.deposita(300.0);
-		c1.saca(50.0);
-		System.out.println(c1.calculaRendimento());
-		System.out.println(c1.recuperaDadosParaImpressao());
-		System.out.println(Conta.getTotalDeContas());
+		c2.transfere(c1, 150.0);
+		System.out.println("Saldo c2 após emitir à transferência: " + c2.getSaldo());
+		System.out.println("Saldo c1 após receber a tranferência: " + c1.getSaldo());
 
 	}
 

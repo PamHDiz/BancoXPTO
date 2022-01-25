@@ -16,6 +16,11 @@ public class TestaConta {
 		} else {
 			System.out.println("São diferentes");
 		}
+		
+		c1.deposita(300.0);
+		c1.saca(50.0);
+		System.out.println(c1.calculaRendimento());
+		System.out.println(c1.recuperaDadosParaImpressao());
 
 	}
 

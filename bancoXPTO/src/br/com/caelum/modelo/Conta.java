@@ -6,12 +6,14 @@ public class Conta {
 	private int numero;
 	private String agencia;
 	private double saldo;
+	private static int totalDeContas;
 	
 	public Conta(String titular, int numero, String agencia, double saldo) {
 		this.titular = titular;
 		this.numero = numero;
 		this.agencia = agencia;
 		this.saldo = saldo;
+		this.totalDeContas += 1;
 	}
 	
 	public String recuperaDadosParaImpressao() {
@@ -53,5 +55,9 @@ public class Conta {
 
 	public double getSaldo() {
 		return saldo;
+	}
+	
+	public static int getTotalDeContas() {
+		return Conta.totalDeContas;
 	}
 }

@@ -25,11 +25,19 @@ public class Conta {
 		return dados;
 	} 
 	
-	public void saca(double valor) {
+	public boolean saca(double valor) {
 		if (valor > this.saldo) {
 			System.out.println("Saldo insuficiente");
+			return false;
 		} else {
 			this.saldo -= valor;
+			return true;
+		}
+	}
+	
+	public void transfere(Conta destino, double valor) {
+		if(this.saca(valor)) {
+		destino.deposita(valor);
 		}
 	}
 	
@@ -38,7 +46,11 @@ public class Conta {
 	}
 	
 	public void deposita(double valor) {
+		if(valor <= 0) {
+			System.out.println("Informe um valor válido");
+		} else {
 		this.saldo += valor;
+		}
 	}
 
 	public String getTitular() {

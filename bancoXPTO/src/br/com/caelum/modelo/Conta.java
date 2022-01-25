@@ -4,10 +4,10 @@ public class Conta {
 	
 	private String titular;
 	private int numero;
-	private int agencia;
+	private String agencia;
 	private double saldo;
 	
-	public Conta(String titular, int numero, int agencia, double saldo) {
+	public Conta(String titular, int numero, String agencia, double saldo) {
 		this.titular = titular;
 		this.numero = numero;
 		this.agencia = agencia;
@@ -43,7 +43,7 @@ public class Conta {
 		return numero;
 	}
 
-	public int getAgencia() {
+	public String getAgencia() {
 		return agencia;
 	}
 

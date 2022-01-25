@@ -14,14 +14,17 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
-	public boolean saca(double valor) {
-		if(valor > this.saldo) {
-			System.out.println("Saldo insuficiente");
-			return false;
-		} else {
-			this.saldo -= valor;
-			return true;
-		}
+	public String recuperaDadosParaImpressao() {
+		String dados = "Titular " + this.titular;
+		dados += "\nAgência " + this.agencia;
+		dados += "\nNúmero " + this.numero;
+		dados += "\nSaldo " + this.saldo;
+		dados += "\nRedimento Atual " + this.calculaRendimento();
+		return dados;
+	} 
+	
+	public void saca(double valor) {
+		this.saldo -= valor;
 	}
 	
 	public double calculaRendimento() {

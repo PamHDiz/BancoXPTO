@@ -24,7 +24,11 @@ public class Conta {
 	} 
 	
 	public void saca(double valor) {
-		this.saldo -= valor;
+		if (valor > this.saldo) {
+			System.out.println("Saldo insuficiente");
+		} else {
+			this.saldo -= valor;
+		}
 	}
 	
 	public double calculaRendimento() {

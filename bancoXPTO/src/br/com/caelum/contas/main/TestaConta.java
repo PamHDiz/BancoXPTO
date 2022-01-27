@@ -1,6 +1,6 @@
-package br.com.caelum.main;
+package br.com.caelum.contas.main;
 
-import br.com.caelum.modelo.Conta;
+import br.com.caelum.contas.modelo.Conta;
 
 public class TestaConta {
 
@@ -23,8 +23,8 @@ public class TestaConta {
 		 */
 		
 		c2.transfere(c1, 150.0);
-		System.out.println("Saldo c2 após emitir à transferência: " + c2.getSaldo());
-		System.out.println("Saldo c1 após receber a tranferência: " + c1.getSaldo());
+		System.out.println("Saldo c2 após emitir a transferência: " + c2.getSaldo());
+		System.out.println("Saldo c1 após receber a transferência: " + c1.getSaldo());
 
 	}
 

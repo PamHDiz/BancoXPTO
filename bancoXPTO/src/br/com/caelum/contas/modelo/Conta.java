@@ -8,6 +8,9 @@ public class Conta {
 	private double saldo;
 	private static int totalDeContas;
 	
+	public Conta() {}
+		
+	
 	public Conta(String titular, int numero, String agencia, double saldo) {
 		this.titular = titular;
 		this.numero = numero;

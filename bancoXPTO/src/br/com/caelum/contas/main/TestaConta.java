@@ -6,11 +6,13 @@ import br.com.caelum.javafx.api.main.TelaDeContas;
 public class TestaConta {
 
 	public static void main(String[] args) {
-		
-		Conta c1 = new Conta("Danilo", 12345, "0001", 100.0);
-		Conta c2 = new Conta("Rafael", 11222, "0001", 200.0);
-		
+		TelaDeContas.main(args);
+
 		/*
+		 * Conta c1 = new Conta("Danilo", 12345, "0001", 100.0); Conta c2 = new
+		 * Conta("Rafael", 11222, "0001", 200.0);
+		 * 
+		 * 
 		 * Conta c3 = c1;
 		 * 
 		 * 
@@ -21,12 +23,14 @@ public class TestaConta {
 		 * System.out.println(c1.calculaRendimento());
 		 * System.out.println(c1.recuperaDadosParaImpressao());
 		 * System.out.println(Conta.getTotalDeContas());
+		 * 
+		 * 
+		 * c2.transfere(c1, 150.0);
+		 * System.out.println("Saldo c2 após emitir a transferência: " + c2.getSaldo());
+		 * System.out.println("Saldo c1 após receber a transferência: " +
+		 * c1.getSaldo());
 		 */
 		
-		c2.transfere(c1, 150.0);
-		System.out.println("Saldo c2 após emitir a transferência: " + c2.getSaldo());
-		System.out.println("Saldo c1 após receber a transferência: " + c1.getSaldo());
-		TelaDeContas.main(args);
 
 	}
 

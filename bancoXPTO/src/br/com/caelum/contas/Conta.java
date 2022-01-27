@@ -1,4 +1,4 @@
-package br.com.caelum.modelo;
+package br.com.caelum.contas;
 
 public class Conta {
 	

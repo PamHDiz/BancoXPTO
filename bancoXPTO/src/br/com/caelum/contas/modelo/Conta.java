@@ -5,20 +5,20 @@ public class Conta {
 	private String titular;
 	private int numero;
 	private String agencia;
-	private double saldo;
+	protected double saldo;
 	private static int totalDeContas;
 	
 	public Conta() {}
 		
 	
-	public Conta(String titular, int numero, String agencia, double saldo) {
+	public Conta(String titular, int numero, String agencia) {
 		this.titular = titular;
 		this.numero = numero;
 		this.agencia = agencia;
-		this.saldo = saldo;
 		this.totalDeContas += 1;
 	}
 	
+
 	public String recuperaDadosParaImpressao() {
 		String dados = "Titular " + this.titular;
 		dados += "\nAgência " + this.agencia;
@@ -44,6 +44,25 @@ public class Conta {
 		}
 	}
 	
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+
+	
+	public String getTipo() {
+		return "É apenas o modelo da Conta";
+	}
+	
 	public double calculaRendimento() {
 		return this.saldo * 0.1;
 	}
@@ -57,7 +76,7 @@ public class Conta {
 	}
 
 	public String getTitular() {
-		return titular;
+		return this.titular;
 	}
 
 	public int getNumero() {

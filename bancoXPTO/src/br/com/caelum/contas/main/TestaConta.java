@@ -1,12 +1,15 @@
 package br.com.caelum.contas.main;
 
 import br.com.caelum.contas.modelo.Conta;
+import br.com.caelum.javafx.api.main.SistemaBancario;
 import br.com.caelum.javafx.api.main.TelaDeContas;
 
 public class TestaConta {
 
 	public static void main(String[] args) {
-		TelaDeContas.main(args);
+		//TelaDeContas.main(args);
+		
+		SistemaBancario.mostraTela(false);
 
 		/*
 		 * Conta c1 = new Conta("Danilo", 12345, "0001", 100.0); Conta c2 = new

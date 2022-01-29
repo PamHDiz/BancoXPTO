@@ -8,13 +8,7 @@ public class ContaCorrente extends Conta {
 	}
 	
 	@Override
-	public boolean saca(double valor) {
-		if (valor > this.saldo) {
-			System.out.println("Saldo insuficiente");
-			return false;
-		} else {
-			this.saldo -= (valor + 0.1);
-			return true;
-		}
+	public void saca(double valor) {
+		super.saca(valor + 0.10);
 	}
 }

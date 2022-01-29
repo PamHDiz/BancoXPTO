@@ -5,7 +5,7 @@ public class Conta {
 	private String titular;
 	private int numero;
 	private String agencia;
-	protected double saldo;
+	private double saldo;
 	private static int totalDeContas;
 	
 	public Conta() {}
@@ -28,13 +28,11 @@ public class Conta {
 		return dados;
 	} 
 	
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		if (valor > this.saldo) {
 			System.out.println("Saldo insuficiente");
-			return false;
 		} else {
 			this.saldo -= valor;
-			return true;
 		}
 	}
 	

@@ -8,14 +8,12 @@ public class ContaPoupanca extends Conta {
 	}
 	
 	@Override
-	public boolean saca(double valor) {
-		if (valor > this.saldo) {
-			System.out.println("Saldo insuficiente");
-			return false;
-		} else {
-			this.saldo -= valor;
-			return true;
-		}
+	public void saca(double valor) {
+		super.saca(valor);
+		/*
+		 * if (valor > this.saldo) { System.out.println("Saldo insuficiente"); return
+		 * false; } else { this.saldo -= valor; return true; }
+		 */
 	}
 
 }

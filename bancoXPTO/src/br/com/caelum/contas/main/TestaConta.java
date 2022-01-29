@@ -1,6 +1,7 @@
 package br.com.caelum.contas.main;
 
 import br.com.caelum.contas.modelo.Conta;
+import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.javafx.api.main.SistemaBancario;
 import br.com.caelum.javafx.api.main.TelaDeContas;
 
@@ -34,8 +35,11 @@ public class TestaConta {
 		 * c1.getSaldo());
 		 */
 		 
+		/*
+		 * ContaCorrente cc1 = new ContaCorrente(); cc1.deposita(1000);
+		 * System.out.println(cc1.getValorImposto());
+		 */
 		
-
 	}
 
 }

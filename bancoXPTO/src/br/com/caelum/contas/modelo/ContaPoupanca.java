@@ -2,10 +2,12 @@ package br.com.caelum.contas.modelo;
 
 public class ContaPoupanca extends Conta {
 	
+	
 	@Override
 	public String getTipo() {
-		return super.getTipo() + " Poupança";
+		return "Conta Poupança";
 	}
+	 
 	
 	@Override
 	public void saca(double valor) {
@@ -15,5 +17,4 @@ public class ContaPoupanca extends Conta {
 		 * false; } else { this.saldo -= valor; return true; }
 		 */
 	}
-
 }

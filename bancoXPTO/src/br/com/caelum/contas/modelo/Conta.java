@@ -1,6 +1,6 @@
 package br.com.caelum.contas.modelo;
 
-public class Conta {
+public abstract class Conta {
 	
 	private String titular;
 	private int numero;
@@ -10,13 +10,14 @@ public class Conta {
 	
 	public Conta() {}
 		
-	
 	public Conta(String titular, int numero, String agencia) {
 		this.titular = titular;
 		this.numero = numero;
 		this.agencia = agencia;
 		this.totalDeContas += 1;
 	}
+	
+	public abstract String getTipo();
 	
 
 	public String recuperaDadosParaImpressao() {
@@ -42,11 +43,18 @@ public class Conta {
 		
 	}
 	
-	public void setTitular(String titular) {
-		this.titular = titular;
+	public void deposita(double valor) {
+		if(valor <= 0) {
+			System.out.println("Informe um valor válido");
+		} else {
+		this.saldo += valor;
+		}
 	}
-
-
+	
+	public double calculaRendimento() {
+		return this.saldo * 0.1;
+	}
+		
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
@@ -56,25 +64,12 @@ public class Conta {
 		this.agencia = agencia;
 	}
 
-	
-	public String getTipo() {
-		return "Conta";
-	}
-	
-	public double calculaRendimento() {
-		return this.saldo * 0.1;
-	}
-	
-	public void deposita(double valor) {
-		if(valor <= 0) {
-			System.out.println("Informe um valor válido");
-		} else {
-		this.saldo += valor;
-		}
-	}
-
 	public String getTitular() {
 		return this.titular;
+	}
+	
+	public void setTitular(String titular) {
+		this.titular = titular;
 	}
 
 	public int getNumero() {

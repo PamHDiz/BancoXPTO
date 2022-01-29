@@ -4,7 +4,7 @@ public class ContaCorrente extends Conta {
 	
 	@Override
 	public String getTipo() {
-		return "Conta Corrente";
+		return super.getTipo() + " Corrente";
 	}
 	
 	@Override

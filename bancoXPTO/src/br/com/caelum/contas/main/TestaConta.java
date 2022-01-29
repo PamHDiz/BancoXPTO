@@ -11,9 +11,10 @@ public class TestaConta {
 		
 		SistemaBancario.mostraTela(false);
 
+		
 		/*
-		 * Conta c1 = new Conta("Danilo", 12345, "0001", 100.0); Conta c2 = new
-		 * Conta("Rafael", 11222, "0001", 200.0);
+		 * Conta c1 = new Conta("Danilo", 12345, "0001"); Conta c2 = new Conta("Rafael",
+		 * 11222, "0001");
 		 * 
 		 * 
 		 * Conta c3 = c1;
@@ -27,12 +28,12 @@ public class TestaConta {
 		 * System.out.println(c1.recuperaDadosParaImpressao());
 		 * System.out.println(Conta.getTotalDeContas());
 		 * 
-		 * 
-		 * c2.transfere(c1, 150.0);
+		 * c2.deposita(300.0); c2.transfere(c1, 150.0);
 		 * System.out.println("Saldo c2 após emitir a transferência: " + c2.getSaldo());
 		 * System.out.println("Saldo c1 após receber a transferência: " +
 		 * c1.getSaldo());
 		 */
+		 
 		
 
 	}

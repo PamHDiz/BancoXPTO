@@ -39,9 +39,9 @@ public class Conta {
 	}
 	
 	public void transfere(Conta destino, double valor) {
-		if(this.saca(valor)) {
+		this.saca(valor);
 		destino.deposita(valor);
-		}
+		
 	}
 	
 	public void setTitular(String titular) {
@@ -60,7 +60,7 @@ public class Conta {
 
 	
 	public String getTipo() {
-		return "É apenas o modelo da Conta";
+		return "Conta";
 	}
 	
 	public double calculaRendimento() {

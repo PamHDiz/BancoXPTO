@@ -38,4 +38,9 @@ public class ManipuladorDeContas {
 			this.conta.saca(valorDigitado);
 		}
 	}
+	
+	public void transfere(Evento evento) {
+		Conta destino =(Conta) evento.getSelecionadoNoCombo("destino");
+		conta.transfere(destino, evento.getDouble("valorTransferencia"));
+	}
 }

@@ -30,7 +30,7 @@ public class TestaException {
 			cp.saca(50);
 			System.out.println("Consegui sacar da Conta Poupança");
 		} catch(IllegalArgumentException e) {
-			System.out.println(e.getMessage()); // esse método retorna a mensagem passada ao cons
+			System.out.println(e.getMessage()); // esse método retorna a mensagem passada ao construtor
 											    // do método chamado saca						
 		}
 		

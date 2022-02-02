@@ -29,7 +29,7 @@ public abstract class Conta {
 		return dados;
 	} 
 	
-	public void saca(double valor) {
+	public void saca(double valor) throws SaldoInsuficienteException {
 		if (valor > this.saldo) {
 			throw new SaldoInsuficienteException("Saldo Insuficiente, " + "tente um valor menor");
 		} else {
@@ -37,7 +37,7 @@ public abstract class Conta {
 		}
 	}
 	
-	public void transfere(Conta destino, double valor) {
+	public void transfere(Conta destino, double valor) throws SaldoInsuficienteException{
 		this.saca(valor);
 		destino.deposita(valor);
 		
@@ -45,10 +45,9 @@ public abstract class Conta {
 	
 	public void deposita(double valor) {
 		if(valor <= 0) {
-			System.out.println("Informe um valor válido");
-		} else {
-		this.saldo += valor;
+			throw new IllegalArgumentException("Valor inválido");
 		}
+		this.saldo += valor;
 	}
 	
 	public double calculaRendimento() {

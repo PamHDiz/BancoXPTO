@@ -3,6 +3,7 @@ package br.com.caelum.contas;
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
+import br.com.caelum.contas.modelo.SaldoInsuficienteException;
 import br.com.caelum.javafx.api.util.Evento;
 
 public class ManipuladorDeContas {
@@ -30,7 +31,7 @@ public class ManipuladorDeContas {
 		this.conta.deposita(valorDigitado);
 	}
 	
-	public void saca(Evento evento) {
+	public void saca(Evento evento) throws SaldoInsuficienteException {
 		double valorDigitado = evento.getDouble("valorOperacao");
 		if(this.conta.getTipo().equals("Conta Corrente")) {
 			this.conta.saca(valorDigitado);
@@ -39,7 +40,7 @@ public class ManipuladorDeContas {
 		}
 	}
 	
-	public void transfere(Evento evento) {
+	public void transfere(Evento evento) throws SaldoInsuficienteException {
 		Conta destino =(Conta) evento.getSelecionadoNoCombo("destino");
 		conta.transfere(destino, evento.getDouble("valorTransferencia"));
 	}

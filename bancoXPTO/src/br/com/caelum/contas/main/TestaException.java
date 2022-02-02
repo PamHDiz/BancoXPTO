@@ -1,7 +1,5 @@
 package br.com.caelum.contas.main;
 
-import java.io.FileNotFoundException;
-
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
@@ -20,10 +18,13 @@ public class TestaException {
 		cc.deposita(200);
 		
 		try {
-			cc.saca(250);
+			cc.saca(50);
 		} catch (SaldoInsuficienteException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		cc.deposita(-10);
+		
 		
 		/*
 		 * Conta cc = new ContaCorrente();

@@ -26,6 +26,12 @@ public class TestaString {
 		frase = frase.toUpperCase();
 		System.out.println(frase);
 		
+		System.out.println(frase.indexOf("CUME"));
+		
+		String texto = "micro-ondas-micro-ondas-micro-ondas";
+
+        int indice = texto.indexOf("ondas");
+        System.out.println(indice);
 		
 //		String palavra = "fj11";
 //		palavra = palavra.replace("1", "2");

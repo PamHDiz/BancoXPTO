@@ -32,7 +32,7 @@ public abstract class Conta {
 	
 	@Override
 	public String toString() {
-		return "[Titular: " + this.titular + ", Agência: " 
+		return "[Titular: " + this.titular.toUpperCase() + ", Agência: " 
 				+ this.agencia + ", Número: " + this.numero + "]";
 	}
 
@@ -60,7 +60,7 @@ public abstract class Conta {
 	}
 	
 	public void deposita(double valor) {
-		if(valor <= 0) {
+		if(valor < 0) {
 			throw new IllegalArgumentException("Valor inválido");
 		}
 		this.saldo += valor;

@@ -19,6 +19,22 @@ public abstract class Conta {
 	
 	public abstract String getTipo();
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) {
+			return false;
+		}
+		
+		Conta outraConta = (Conta) obj;
+		return this.numero == outraConta.numero && 
+				this.agencia.equals(outraConta.agencia);
+	}
+	
+	@Override
+	public String toString() {
+		return "[Titular: " + this.titular + ", Agência: " 
+				+ this.agencia + ", Número: " + this.numero + "]";
+	}
 
 	public String recuperaDadosParaImpressao() {
 		String dados = "Titular " + this.titular;

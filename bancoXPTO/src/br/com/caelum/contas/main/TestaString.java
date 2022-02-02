@@ -20,6 +20,19 @@ public class TestaString {
 		} else {
 			System.out.println("\nConsideramos diferentes no critério de igualdade");
 		}
+		
+		String frase = "O vento no cume bate";
+		frase.toUpperCase();
+		frase = frase.toUpperCase();
+		System.out.println(frase);
+		
+		
+//		String palavra = "fj11";
+//		palavra = palavra.replace("1", "2");
+//		palavra = palavra.toUpperCase();
+//		
+//		palavra = palavra.toUpperCase().replace("1", "2");
+//		System.out.println(palavra);
 	}
 
 }

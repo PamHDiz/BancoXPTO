@@ -31,7 +31,7 @@ public abstract class Conta {
 	
 	public void saca(double valor) {
 		if (valor > this.saldo) {
-			throw new IllegalArgumentException("Saldo Insuficiente");
+			throw new SaldoInsuficienteException("Saldo Insuficiente");
 		} else {
 			this.saldo -= valor;
 		}

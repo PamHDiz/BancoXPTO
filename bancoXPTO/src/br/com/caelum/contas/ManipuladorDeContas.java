@@ -31,7 +31,7 @@ public class ManipuladorDeContas {
 		this.conta.deposita(valorDigitado);
 	}
 	
-	public void saca(Evento evento) throws SaldoInsuficienteException {
+	public void saca(Evento evento) {
 		double valorDigitado = evento.getDouble("valorOperacao");
 		if(this.conta.getTipo().equals("Conta Corrente")) {
 			this.conta.saca(valorDigitado);
@@ -40,7 +40,7 @@ public class ManipuladorDeContas {
 		}
 	}
 	
-	public void transfere(Evento evento) throws SaldoInsuficienteException {
+	public void transfere(Evento evento) {
 		Conta destino =(Conta) evento.getSelecionadoNoCombo("destino");
 		conta.transfere(destino, evento.getDouble("valorTransferencia"));
 	}

@@ -10,7 +10,7 @@ public class ContaPoupanca extends Conta {
 	 
 	
 	@Override
-	public void saca(double valor) throws SaldoInsuficienteException {
+	public void saca(double valor){
 		super.saca(valor);
 		/*
 		 * if (valor > this.saldo) { System.out.println("Saldo insuficiente"); return

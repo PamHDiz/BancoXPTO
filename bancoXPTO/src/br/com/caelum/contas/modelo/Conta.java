@@ -29,15 +29,15 @@ public abstract class Conta {
 		return dados;
 	} 
 	
-	public void saca(double valor) throws SaldoInsuficienteException {
+	public void saca(double valor) {
 		if (valor > this.saldo) {
-			throw new SaldoInsuficienteException("Saldo Insuficiente, " + "tente um valor menor");
+			throw new SaldoInsuficienteException(valor);
 		} else {
 			this.saldo -= valor;
 		}
 	}
 	
-	public void transfere(Conta destino, double valor) throws SaldoInsuficienteException{
+	public void transfere(Conta destino, double valor) {
 		this.saca(valor);
 		destino.deposita(valor);
 		

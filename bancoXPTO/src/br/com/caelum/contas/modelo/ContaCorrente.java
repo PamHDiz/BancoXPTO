@@ -1,6 +1,6 @@
 package br.com.caelum.contas.modelo;
 
-public class ContaCorrente extends Conta implements Tributavel, Comparable<ContaCorrente> {
+public class ContaCorrente extends Conta implements Tributavel {
 	
 	@Override
 	public String getTipo() {
@@ -19,9 +19,6 @@ public class ContaCorrente extends Conta implements Tributavel, Comparable<Conta
 
 	// método que torna a classe comparável para definir o critério de ordenação na chamada do método
 	// sort da Collection FrameWork
-	@Override
-	public int compareTo(ContaCorrente outra) {
-		return Integer.compare(this.getNumero(), outra.getNumero());
-	}
+	
 
 }

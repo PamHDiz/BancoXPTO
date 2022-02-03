@@ -18,8 +18,9 @@ public class Banco {
 			if(this.contas[i] == null) {
 				this.contas[i] = c;
 				totalDeContas++;
+				break;
 			} else {
-				throw new ArrayIndexOutOfBoundsException();
+				throw new ArrayIndexOutOfBoundsException("Não há mais espaço para novas contas");
 			}
 		}
 	}

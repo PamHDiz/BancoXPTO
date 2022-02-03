@@ -1,6 +1,7 @@
 package br.com.caelum.contas.main;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import br.com.caelum.contas.modelo.ContaCorrente;
@@ -38,7 +39,17 @@ public class TesteCollection {
 			System.out.println(cc.getSaldo());
 		}
 		
+		List<String> lista = new ArrayList<>();
+		lista.add("Sérgio");
+		lista.add("Gabriela");
+		lista.add("Andrea");
+		lista.add("Paulo");
 		
+		System.out.println(lista); // o toString da ArrayList foi sobrescrito; imprime na ordem de inserção
+		
+		Collections.sort(lista); // ordena a lista e imprime na ordem alfabética
+		
+		System.out.println(lista);
 		
 	}
 

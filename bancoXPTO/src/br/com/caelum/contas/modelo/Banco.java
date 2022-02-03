@@ -29,10 +29,7 @@ public class Banco {
 		for(int i = 0; i < this.contas.length; i++) {
 			if(this.contas[i] != null) {
 				System.out.println("Conta na posição: " + i);
-				System.out.println("\nAgência: " + this.contas[i].getAgencia());
-				System.out.println("Número: " + this.contas[i].getNumero());
-				System.out.println("Titular: " + this.contas[i].getNumero());
-				
+				System.out.println("Dados da Conta: " + this.contas[i]);
 			}
 		}
 	}

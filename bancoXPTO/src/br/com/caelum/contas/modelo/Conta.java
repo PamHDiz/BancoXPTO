@@ -32,7 +32,7 @@ public abstract class Conta {
 	
 	@Override
 	public String toString() {
-		return "[Titular: " + this.titular + ", Agência: " 
+		return "[Titular: " + this.titular.toUpperCase() + ", Agência: " 
 				+ this.agencia + ", Número: " + this.numero + "]";
 	}
 

@@ -13,6 +13,10 @@ public class TesteCollection {
 		ContaCorrente cc2 = new ContaCorrente();
 		ContaCorrente cc3 = new ContaCorrente();
 		
+		cc1.deposita(100);
+		cc2.deposita(200);
+		cc3.deposita(300);
+		
 		//List lista = new ArrayList();
 		 
 		// se eu mantiver dessa forma, minha lista vai adicionar qualquer tipo de objeto
@@ -28,6 +32,11 @@ public class TesteCollection {
 		contas.add(cc1);
 		contas.add(cc2);
 		contas.add(cc3);
+		
+		for(int i = 0; i < contas.size(); i++) {
+			ContaCorrente cc = contas.get(i);
+			System.out.println(cc.getSaldo());
+		}
 		
 		
 		

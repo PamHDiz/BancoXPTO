@@ -33,6 +33,15 @@ public class Banco {
 			}
 		}
 	}
+	
+	public boolean contem(Conta conta) {
+		for(int i = 0; i < totalDeContas; i++) {
+			if(conta.equals(this.contas[i])) {
+				return true;
+			} 
+		}
+		return false;
+	}
 
 	public String getNome() {
 		return nome;

@@ -5,7 +5,7 @@ public abstract class Conta {
 	private String titular;
 	private int numero;
 	private String agencia;
-	private double saldo;
+	protected double saldo;
 	private static int totalDeContas;
 	
 	public Conta() {}
@@ -32,7 +32,7 @@ public abstract class Conta {
 	
 	@Override
 	public String toString() {
-		return "[Titular: " + this.titular.toUpperCase() + ", Agência: " 
+		return "[Titular: " + this.titular + ", Agência: " 
 				+ this.agencia + ", Número: " + this.numero + "]";
 	}
 

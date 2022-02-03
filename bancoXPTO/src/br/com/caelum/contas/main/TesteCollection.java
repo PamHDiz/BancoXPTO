@@ -14,6 +14,14 @@ public class TesteCollection {
 		ContaCorrente cc2 = new ContaCorrente();
 		ContaCorrente cc3 = new ContaCorrente();
 		
+		cc1.setAgencia("0001");
+		cc2.setAgencia("0001");
+		cc3.setAgencia("0001");
+		
+		cc1.setNumero(12345);
+		cc2.setNumero(22222);
+		cc3.setNumero(12111);
+		
 		cc1.deposita(100);
 		cc2.deposita(200);
 		cc3.deposita(300);
@@ -30,9 +38,9 @@ public class TesteCollection {
 		List<ContaCorrente> contas = new ArrayList<>();
 		// lista.add("Uma String"); <-- essa linha para de compilar
 		
+		contas.add(cc3);
 		contas.add(cc1);
 		contas.add(cc2);
-		contas.add(cc3);
 		
 		for(int i = 0; i < contas.size(); i++) {
 			ContaCorrente cc = contas.get(i);
@@ -50,6 +58,14 @@ public class TesteCollection {
 		Collections.sort(lista); // ordena a lista e imprime na ordem alfabética
 		
 		System.out.println(lista);
+		
+		//---------------------------------------------------
+		
+		// Fizemos a classe ContaCorrente implementar a Interface Comparable para definir o critério
+		// de ordenação que será chamado pelo método sort
+		
+		Collections.sort(contas);
+		System.out.println(contas);
 		
 	}
 

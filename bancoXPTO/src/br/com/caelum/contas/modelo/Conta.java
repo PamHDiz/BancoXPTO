@@ -1,6 +1,6 @@
 package br.com.caelum.contas.modelo;
 
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
 	
 	private String titular;
 	private int numero;
@@ -68,6 +68,10 @@ public abstract class Conta {
 	
 	public double calculaRendimento() {
 		return this.saldo * 0.1;
+	}
+	
+	public int compareTo(Conta outraConta) {
+		return this.titular.compareTo(outraConta.titular);
 	}
 		
 	public void setNumero(int numero) {

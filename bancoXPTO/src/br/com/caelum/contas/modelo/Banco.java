@@ -5,7 +5,6 @@ public class Banco {
 	private String nome;
 	private int numero;
 	private Conta[] contas;
-	private static int totalDeContas = 0;
 	
 	public Banco(String nome, int numero) {
 		this.nome = nome;
@@ -14,33 +13,32 @@ public class Banco {
 	}
 	
 	public void adiciona(Conta c) {
-		for(int i = 0; i < this.contas.length; i++) {
-			if(this.contas[i] == null) {
+		for (int i = 0; i < this.contas.length; i++) {
+			if (this.contas[i] == null) {
 				this.contas[i] = c;
-				totalDeContas++;
 				break;
-			} else {
-				throw new ArrayIndexOutOfBoundsException("Não há mais espaço para novas contas");
 			}
 		}
 	}
 	
 	public void mostraContas() {
-		for(int i = 0; i < this.contas.length; i++) {
-			if(this.contas[i] != null) {
+		for (int i = 0; i < this.contas.length; i++) {
+			Conta conta = this.contas[i];
+			if (conta != null) {
 				System.out.println("Conta na posição: " + i);
-				System.out.println("Dados da Conta: " + this.contas[i]);
+				System.out.println("Dados da conta:	" + conta);
 			}
 		}
 	}
 	
 	public boolean contem(Conta conta) {
-		for(int i = 0; i < totalDeContas; i++) {
-			if(conta.equals(this.contas[i])) {
+		for (int i = 0; i < this.contas.length; i++) {
+			if (conta.equals(this.contas[i])) {
 				return true;
-			} 
+			}
 		}
 		return false;
+
 	}
 
 	public String getNome() {

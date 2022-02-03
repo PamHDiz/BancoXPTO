@@ -16,18 +16,18 @@ public class TestaBanco {
 		c1.setNumero(12345);
 		
 		ContaCorrente c2 = new ContaCorrente();
-		c1.setTitular("Vegeta");
-		c1.setAgencia("0001");
-		c1.setNumero(11222);
+		c2.setTitular("Vegeta");
+		c2.setAgencia("0001");
+		c2.setNumero(11222);
 		
-		ContaPoupanca c3 = new ContaPoupanca();
-		c3.setTitular("Gohan");
-		c3.setAgencia("0001");
-		c3.setNumero(22111);
 		
 		banco.adiciona(c1);
 		banco.adiciona(c2);
-		banco.adiciona(c3);
+
+		
+
+		banco.mostraContas();
+		System.out.println(banco.contem(c2));
 
 	}
 

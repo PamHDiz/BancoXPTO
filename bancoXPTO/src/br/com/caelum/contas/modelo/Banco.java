@@ -1,43 +1,33 @@
 package br.com.caelum.contas.modelo;
 
+import java.util.ArrayList;
+
+import java.util.List;
+
 public class Banco {
 	
 	private String nome;
 	private int numero;
-	private Conta[] contas;
+	private Conta contas;
+	private List <Conta> listaContas = new ArrayList<>();
+	
 	
 	public Banco(String nome, int numero) {
 		this.nome = nome;
 		this.numero = numero;
-		this.contas = new ContaCorrente[10];
+		this.contas = new ContaCorrente();
 	}
 	
 	public void adiciona(Conta c) {
-		for (int i = 0; i < this.contas.length; i++) {
-			if (this.contas[i] == null) {
-				this.contas[i] = c;
-				break;
-			}
+			listaContas.add(c);
 		}
+	
+	public Conta pega(int posicao) {
+		return listaContas.get(posicao);
 	}
 	
-	public void mostraContas() {
-		for (int i = 0; i < this.contas.length; i++) {
-			Conta conta = this.contas[i];
-			if (conta != null) {
-				System.out.println("Conta na posição: " + i);
-				System.out.println("Dados da conta:	" + conta);
-			}
-		}
-	}
-	
-	public boolean contem(Conta conta) {
-		for (int i = 0; i < this.contas.length; i++) {
-			if (conta.equals(this.contas[i])) {
-				return true;
-			}
-		}
-		return false;
+	public int getQuantidadeDeContas() {
+		return listaContas.size();
 
 	}
 
@@ -49,7 +39,7 @@ public class Banco {
 		return numero;
 	}
 
-	public Conta[] getContas() {
+	public Conta getContas() {
 		return contas;
 	}
 	

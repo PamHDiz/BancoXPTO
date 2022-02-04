@@ -1,8 +1,9 @@
 package br.com.caelum.contas.modelo;
 
 import java.util.ArrayList;
-
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Banco {
 	
@@ -10,7 +11,7 @@ public class Banco {
 	private int numero;
 	private Conta contas;
 	private List <Conta> listaContas = new ArrayList<>();
-	
+	private Map<String, Conta> indexadoPorNome = new HashMap<>();
 	
 	public Banco(String nome, int numero) {
 		this.nome = nome;
@@ -18,8 +19,9 @@ public class Banco {
 		this.contas = new ContaCorrente();
 	}
 	
-	public void adiciona(Conta c) {
-			listaContas.add(c);
+	public void adiciona(Conta conta) {
+			listaContas.add(conta);
+			indexadoPorNome.put(conta.getTitular(), conta);
 		}
 	
 	public Conta pega(int posicao) {
@@ -28,7 +30,10 @@ public class Banco {
 	
 	public int getQuantidadeDeContas() {
 		return listaContas.size();
-
+	}
+	
+	public Conta buscaPorTitular(String nomeDoTitular) {
+		return indexadoPorNome.get(nomeDoTitular);
 	}
 
 	public String getNome() {

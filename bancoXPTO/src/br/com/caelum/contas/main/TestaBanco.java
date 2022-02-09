@@ -26,8 +26,9 @@ public class TestaBanco {
 
 		
 
-		banco.mostraContas();
-		System.out.println(banco.contem(c2));
+		System.out.println(banco.getQuantidadeDeContas());
+		System.out.println(banco.buscaPorTitular("Vegeta"));
+		System.out.println(banco.pega(0));
 
 	}
 

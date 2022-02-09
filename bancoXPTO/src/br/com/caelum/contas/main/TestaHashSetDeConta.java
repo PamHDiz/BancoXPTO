@@ -31,9 +31,8 @@ public class TestaHashSetDeConta {
 		contas.add(c3);
 		
 		System.out.println("Total de contas no HashSet: " + contas.size());
+		// a conta com número repetido não foi adicionada
 		
-		
-
 	}
 
 }

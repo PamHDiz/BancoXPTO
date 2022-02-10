@@ -32,6 +32,9 @@ public class TesteEntrada {
 			System.out.println(leu);
 			leu = leitor.readLine();
 		}
+		
+		leitor.close();
+		
 	}
 
 }

@@ -55,5 +55,12 @@ public class ManipuladorDeContas {
 	
 	public void salvaDados(Evento evento){
 		List<Conta> contas = evento.getLista("listaContas");
+		RepositorioDeContas repositorio = new RepositorioDeContas();
+		repositorio.salva(contas);
+	}
+	
+	public List<Conta> carregaDados() {
+		RepositorioDeContas repositorio = new RepositorioDeContas();
+		return repositorio.carrega();
 	}
 }

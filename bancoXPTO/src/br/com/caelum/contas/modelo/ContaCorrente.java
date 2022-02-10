@@ -2,6 +2,15 @@ package br.com.caelum.contas.modelo;
 
 public class ContaCorrente extends Conta implements Tributavel {
 	
+	public ContaCorrente(int numero, String agencia, String titular, double saldo) {
+		super.setNumero(numero);
+		super.setAgencia(agencia);
+		super.setTitular(titular);
+		this.saldo = saldo;
+	}
+
+	public ContaCorrente() {}
+
 	@Override
 	public String getTipo() {
 		return "Conta Corrente";

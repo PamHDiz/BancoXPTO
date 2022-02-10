@@ -22,6 +22,16 @@ public class TesteEntrada {
 		}
 
 		br.close();
+		
+		InputStream teclado = System.in;
+		InputStreamReader pegaTeclado = new InputStreamReader(teclado);
+		BufferedReader leitor = new BufferedReader(pegaTeclado);
+		String leu = leitor.readLine();
+		
+		while(leu != null) {
+			System.out.println(leu);
+			leu = leitor.readLine();
+		}
 	}
 
 }

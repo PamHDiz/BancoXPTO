@@ -1,0 +1,2 @@
+Este é um arquivo escrito para entender como funcionam as interfaces dedicadas a leitura de arquivos
+do Java. A InputStream, InputStreamReader e a BufferedReader.

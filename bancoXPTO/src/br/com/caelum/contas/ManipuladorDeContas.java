@@ -51,6 +51,9 @@ public class ManipuladorDeContas {
 	public void ordenaLista(Evento evento) {
 		List<Conta> contas = evento.getLista("destino");
 		Collections.sort(contas);
-		
+	}
+	
+	public void salvaDados(Evento evento){
+		List<Conta> contas = evento.getLista("listaContas");
 	}
 }

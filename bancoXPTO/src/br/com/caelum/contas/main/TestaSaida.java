@@ -4,6 +4,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.util.Scanner;
 
 public class TestaSaida {
 
@@ -17,6 +19,18 @@ public class TestaSaida {
 		bw.write("\nFuncionou!!!");
 		
 		bw.close();
+		
+		/*
+		 * Scanner scan = new Scanner(System.in); PrintStream ps = new
+		 * PrintStream("arquivo.txt"); while(scan.hasNextLine()) {
+		 * ps.println(scan.nextLine()); }
+		 */
+		
+		// int em String
+		int x = 123;
+		String sx = "" + x; // concatenando o int/double/float
+		System.out.println(sx);
+		
 	}
 
 }
